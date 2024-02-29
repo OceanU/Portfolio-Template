@@ -1,0 +1,31 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome {
+    background-color: blueviolet;
+    height: 100vh;
+}
+
+.about {
+    background-color: aqua;
+    height: 90vh;
+}
+
+.project {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    background-color: antiquewhite;
+    height: 60vh;
+}
+
+.footer {
+    background-color: beige;
+    height: 55vh
+}
