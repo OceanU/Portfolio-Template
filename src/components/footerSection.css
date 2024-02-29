@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    height: 55vh;
+    color: white;
+
+    background-image: url('carbon-fagure.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+
+}
+
+.details {
+    text-align: center;
+}
+
+.footer hr {
+    width: 150px;
+    color: white;
+}

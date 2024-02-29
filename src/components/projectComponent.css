@@ -1,9 +1,9 @@
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
     width: 80vw;
-    height: 80vh;
-    background-color: red;
+    height: 70vh;
     border: 1px white solid;
     margin: 5%;
 }
@@ -13,13 +13,14 @@
     display: flex;
     flex-direction: column;
     height: 60%;
-    width: 30%;
+    width: 400px;
     background-color: white;
+
 }
 
 .picture-wraper {
-    height: 100%;
-    width: 60%;
+    height: auto;
+    width: 700px;
     background-color: white;
 }
 
@@ -30,4 +31,8 @@
     /* Maintain the aspect ratio while adjusting the width */
     max-height: 100%;
     /* Ensure the image doesn't exceed the height of the parent container */
+}
+
+.project h1 {
+    transform: rotate(5deg);
 }

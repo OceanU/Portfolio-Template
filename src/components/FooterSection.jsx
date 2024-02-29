@@ -1,16 +1,33 @@
 // Header.jsx
 import React from 'react';
-// import './Header.css';
+import './footerSection.css';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 const FooterSection = () => {
-    // Multiple lines of code or logic
-    const title = 'Footer Section';
-
     return (
 
-        <div className="center footer">
-            <h1>{title}</h1>
-            {/* Content for FooterSection */}
+        <div className="footer">
+            <div className='arrow-up'>
+                <KeyboardArrowUpIcon />
+            </div>
+            <div className='social-media-icons'>
+                <FacebookIcon />
+                <InstagramIcon />
+                <LinkedInIcon />
+                <GitHubIcon />
+            </div>
+            <hr />
+            <div className='details'>
+                <p>Other contact details. </p>
+                <p>✆ +073930332827393</p>
+                <p>Alternative Email/ Other Detail</p>
+            </div>
+
         </div>
 
     );

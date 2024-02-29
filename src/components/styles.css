@@ -5,25 +5,47 @@
 }
 
 .welcome {
-    background-color: blueviolet;
+    /* background-color: blueviolet;
+    height: 100vh; */
+    flex-direction: column;
+    min-height: 100vh;
     height: 100vh;
+    border-bottom: 0;
+    background: #fff;
+    font-weight: 400;
+    color: #272341;
+    padding: 0 5.6rem;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 
-.about {
-    background-color: aqua;
-    height: 90vh;
+.welcome-wrap {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    height: 45%;
+    width: 50%;
+    border: 1px solid black;
+    margin-right: 25%;
 }
+
+
+
 
 .project {
-    background-color: brown;
+
     display: flex;
     flex-direction: column;
+    /* margin-top: 10vh; */
+    padding-top: 2 10vh;
+    background-color: #fff;
 }
 
-.contact {
-    background-color: antiquewhite;
-    height: 60vh;
-}
 
 .footer {
     background-color: beige;
