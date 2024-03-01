@@ -1,23 +1,24 @@
 
+import React, { useRef } from 'react';
 import WelcomeSection from "./components/WelcomeSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import FooterSection from "./components/FooterSection";
-import React from 'react';
 
 
 
 function App() {
 
+  const aboutRef = useRef(null);
 
   return (
     <>
-      <WelcomeSection />
-      <AboutSection />
+      <WelcomeSection aboutRef={aboutRef} />
+      <AboutSection aboutRef={aboutRef} />
       <ProjectsSection />
       <ContactSection />
-      <FooterSection />
+      <FooterSection aboutRef={aboutRef} />
     </>
   )
 }
