@@ -13,13 +13,13 @@ const FooterSection = () => {
 
         <div className="footer">
             <div className='arrow-up'>
-                <KeyboardArrowUpIcon />
+                <KeyboardArrowUpIcon fontSize="large" />
             </div>
             <div className='social-media-icons'>
-                <FacebookIcon />
-                <InstagramIcon />
-                <LinkedInIcon />
-                <GitHubIcon />
+                <FacebookIcon fontSize="large" />
+                <InstagramIcon fontSize="large" />
+                <LinkedInIcon fontSize="large" />
+                <GitHubIcon fontSize="large" />
             </div>
             <hr />
             <div className='details'>

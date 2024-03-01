@@ -9,6 +9,11 @@
 }
 
 
+.main-container.scrolled {
+    display: none;
+}
+
+
 .description-wraper {
     display: flex;
     flex-direction: column;
@@ -35,4 +40,11 @@
 
 .project h1 {
     transform: rotate(5deg);
+    background-image: linear-gradient(-135deg, #da52fc, #f2ce2e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.details p {
+    font-size: 18px;
 }

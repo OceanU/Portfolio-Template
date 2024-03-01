@@ -13,7 +13,7 @@
     width: 100%;
     height: 60vh;
     background-color: #f0f0f0;
-    background-image: linear-gradient(135deg, #f1f7f8, #717474);
+    background-image: linear-gradient(-135deg, #da52fc, #f2ce2e);
     /* Set the same background color as the "about" section */
     -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
     /* Adjust the polygon points as needed */
@@ -26,10 +26,20 @@
     justify-content: center;
     align-items: center;
     height: 90%;
-    margin-top: 40px;
+    margin-top: 75px;
+    margin-bottom: 20px;
 }
 
 .contact h1 {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
     margin-top: -90px;
+}
+
+.contact-wrap h1:first-of-type {
+    font-weight: 800;
+}
+
+.contact-wrap p:first-of-type {
+    font-size: 20px;
+    font-weight: 800;
 }

@@ -9,9 +9,10 @@ const ProjectsSection = () => {
     // Multiple lines of code or logic
     const title = 'Projects - My Work';
 
+
     return (
 
-        <div className="center project">
+        <div className={`center project `} >
             <h1>{title}</h1>
             <ProjectComponent
                 title="Project 1 Cool Title"

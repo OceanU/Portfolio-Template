@@ -1,3 +1,4 @@
+// import React from 'react';
 import React from 'react';
 import './projectComponent.css';
 import Button from '@mui/material/Button';
@@ -6,7 +7,7 @@ const ProjectComponent = ({ title, description, imageUrl }) => {
 
     return (
 
-        <div className="main-container">
+        <div className={`main-container`}>
 
             <div className="description-wraper">
                 <div className='title'>

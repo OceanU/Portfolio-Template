@@ -1,4 +1,5 @@
 // Header.jsx
+// import React from 'react';
 import React from 'react';
 import './aboutSection.css';
 import Button from '@mui/material/Button';
@@ -7,8 +8,10 @@ const AboutSection = () => {
     // Multiple lines of code or logic
     const title = 'About Me';
 
+
+
     return (
-        <div className="about">
+        <div className="about" >
             <div className="clipped-shape">
                 <div className='content-wrap'>
                     <h1>{title}</h1>
