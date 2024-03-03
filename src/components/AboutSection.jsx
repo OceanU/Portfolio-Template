@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './aboutSection.css';
 import Button from '@mui/material/Button';
+import portfolioPicture from './port-pic.jpg';
 
 const AboutSection = ({ aboutRef }) => {
 
@@ -48,13 +49,18 @@ const AboutSection = ({ aboutRef }) => {
             <div className="clipped-shape">
                 <div className='content-wrap'>
                     <h1 className={`${scrolled ? 'visible' : ''}`}>{title}</h1>
-                    <div className={`picture-container ${scrolled ? 'visible' : ''}`}></div>
-                    <div className={`text-container ${scrolled ? 'visible' : ''}`}>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
-                        <div>
-                            <Button variant="outlined" >Resume</Button>
+                    <div className='picture-text-wrapper'>
+
+                        <div className={`picture-container ${scrolled ? 'visible' : ''}`}>
+                            <img src={portfolioPicture} alt='portfoliopicture' className='portfolio-picture' />
+                        </div>
+                        <div className={`text-container ${scrolled ? 'visible' : ''}`}>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
+                            <div>
+                                <Button variant="outlined" >Resume</Button>
+                            </div>
                         </div>
                     </div>
 

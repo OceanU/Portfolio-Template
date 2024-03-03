@@ -27,12 +27,19 @@
 
 .welcome-wrap {
     display: flex;
+    justify-content: center;
     height: 100%;
     flex-direction: column;
     height: 45%;
-    width: 65%;
-    margin-right: 20%;
+    width: 100%;
+
     overflow: hidden;
+    /* border: 1px solid black; */
+}
+
+h1 {
+    margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
 }
 
 
@@ -70,6 +77,9 @@
 }
 
 
+.welcome-button {
+    margin-top: 25px;
+}
 
 .welcome-button {
     visibility: visible;
@@ -91,4 +101,41 @@
     opacity: 0;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30, 0, 0, 1);
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .welcome {
+        font-size: 20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    .welcome {
+        padding: 0;
+    }
+
+    .welcome-wrap {
+        margin-right: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* line-height: 0.5; */
+    }
+
+
+    h1 {
+        margin-block-start: 0.1rem;
+        margin-block-end: 0.1rem;
+        line-height: 1;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    h1 {
+
+        font-size: 9vw;
+        line-height: 1.2;
+    }
 }

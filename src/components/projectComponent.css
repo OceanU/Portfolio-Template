@@ -18,6 +18,7 @@
 
 .description-wraper {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     height: 60%;
     width: 400px;
@@ -77,4 +78,76 @@
     opacity: 1;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 1s, transform 1s cubic-bezier(0.5, 0, 0, 1) 1s;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .project h1 {
+        transform: rotate(0deg);
+    }
+
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        width: 100vw;
+        height: 80vw;
+        border: 1px black solid;
+        margin: 0%;
+    }
+
+    .description-wraper {
+        border: 1px solid red;
+        width: 70vw;
+        height: 30vh;
+    }
+
+
+    .picture-wraper {
+        width: 70vw;
+        background-color: white;
+    }
+}
+
+
+
+@media only screen and (max-width: 680px) {
+    .main-container {
+
+        height: 100vh;
+
+    }
+
+    .description-wraper {
+
+        width: 90vw;
+        height: 30vh;
+    }
+
+
+    .picture-wraper {
+        width: 90vw;
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .description-wraper {
+
+        width: 90vw;
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .description-wraper {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .description-wraper {
+        height: 55vh;
+    }
 }
