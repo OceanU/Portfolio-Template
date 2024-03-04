@@ -4,6 +4,10 @@ import './projectComponent.css';
 import Button from '@mui/material/Button';
 
 const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
+
+
+
+    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -37,6 +41,7 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
     }, [scrolled]);
 
 
+    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
     return (
 
         <div className={`main-container ${scrolled ? '' : 'scrolled'}`}>

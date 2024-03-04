@@ -12,6 +12,7 @@ const FooterSection = ({ aboutRef }) => {
 
     const [scrolled, setScrolled] = useState(false);
 
+    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
     useEffect(() => {
         let timeoutId;
 
@@ -39,6 +40,9 @@ const FooterSection = ({ aboutRef }) => {
             clearTimeout(timeoutId);
         };
     }, [scrolled]);
+
+
+    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
 
     const handleScrollToAbout = () => {
         // Scroll to the about section using the ref
