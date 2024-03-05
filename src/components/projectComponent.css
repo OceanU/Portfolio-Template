@@ -80,6 +80,10 @@
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 1s, transform 1s cubic-bezier(0.5, 0, 0, 1) 1s;
 }
 
+.title {
+    font-size: 20px;
+}
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -90,8 +94,8 @@
     .main-container {
         flex-direction: column;
         align-items: center;
-        gap: 0px;
-        width: 100vw;
+        gap: none;
+        width: 100%;
         height: 80vw;
         border: 1px black solid;
         margin: 0%;
@@ -111,6 +115,13 @@
 }
 
 
+@media only screen and (max-width: 775px) {
+    .main-container {
+
+        padding-top: 11vh;
+
+    }
+}
 
 @media only screen and (max-width: 680px) {
     .main-container {
@@ -123,6 +134,8 @@
 
         width: 90vw;
         height: 30vh;
+        justify-content: flex-end;
+
     }
 
 
@@ -130,14 +143,31 @@
         width: 90vw;
         background-color: white;
     }
+
+
 }
 
+
 @media only screen and (max-width: 600px) {
+    .main-container {
+        padding-top: 0vh;
+    }
+
     .description-wraper {
 
-        width: 90vw;
-        height: 40vh;
+        width: 85vw;
+        height: 25vh;
     }
+
+    .picture-wraper {
+        width: 85vw;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+
 }
 
 @media only screen and (max-width: 460px) {

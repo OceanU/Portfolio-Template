@@ -1,0 +1,27 @@
+.project {
+
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 10vh; */
+    padding-top: 2 10vh;
+    background-color: #fff;
+}
+
+
+.project.scrolled {
+    display: none;
+}
+
+.project h1 {
+    visibility: visible;
+    opacity: 0;
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.project h1.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.3s;
+}

@@ -12,10 +12,15 @@
     background-size: cover;
     opacity: 0.9;
 
+
 }
 
 .details {
     text-align: center;
+}
+
+.details p {
+    font-size: 14px;
 }
 
 .footer hr {

@@ -34,6 +34,7 @@
 .contact h1 {
     transform: rotate(3deg);
     margin-top: -90px;
+    font-size: 45px;
 }
 
 .contact-wrap h1:first-of-type {
@@ -56,6 +57,8 @@
 }
 
 
+
+
 .contact-wrap p {
     opacity: 0;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 30, 0, 1);
@@ -66,6 +69,11 @@
     opacity: 1;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.8s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.8s;
+}
+
+.contact-wrap p:first-of-type {
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .contact-wrap Button {
@@ -96,11 +104,35 @@
 
 @media only screen and (max-width: 990px) {}
 
-@media only screen and (max-width: 900px) {}
+@media only screen and (max-width: 900px) {
+    /* .contact h1 {
+        transform: rotate(3deg);
+        margin-top: -90px;
+        font-size: 45px;
+    } */
+}
 
 
 @media only screen and (max-width: 768px) {}
 
-@media only screen and (max-width: 650px) {}
+@media only screen and (max-width: 600px) {
+    .contact {
+        height: 57vh;
+    }
+
+    .clipped-shape.bottom {
+        height: 52vh;
+    }
+
+    .contact-wrap .contact-tittle {
+        font-size: 35px;
+        font-weight: 400;
+    }
+
+    .contact-wrap p:first-of-type {
+        font-size: 20px;
+        font-weight: 200;
+    }
+}
 
 @media only screen and (max-width: 550px) {}

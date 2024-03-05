@@ -1,5 +1,5 @@
 // Header.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './footerSection.css';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -12,34 +12,67 @@ const FooterSection = ({ aboutRef }) => {
 
     const [scrolled, setScrolled] = useState(false);
 
+    //////////////////////////////////////////////        before ading intersection observer
     //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
+    // useEffect(() => {
+    //     let timeoutId;
+
+    //     const handleScroll = () => {
+    //         const scrollPosition = window.scrollY;
+    //         const threshold = 3297;
+
+    //         // Clear previous timeout
+    //         clearTimeout(timeoutId);
+
+    //         // Set a new timeout to delay setting scrolled to true
+    //         timeoutId = setTimeout(() => {
+    //             // Check if scroll position is beyond the threshold
+    //             if (scrollPosition > threshold && !scrolled) {
+    //                 setScrolled(true);
+    //             }
+    //         }, 200); // Adjust the delay time (in milliseconds) as needed
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+
+    //     return () => {
+    //         // Cleanup the event listener and clear the timeout on component unmount
+    //         window.removeEventListener('scroll', handleScroll);
+    //         clearTimeout(timeoutId);
+    //     };
+    // }, [scrolled]);
+    //////////////////////////////////////////////        before ading intersection observer
+    //////////////////////////////////////////////        after adding intersection observer
+    const elementRef = useRef(null);
+
+    const handleIntersection = (entries, observer) => {
+
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Element is now in the viewport, you can trigger your logic here
+                console.log('Element is in the viewport');
+                setScrolled(true);
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
     useEffect(() => {
-        let timeoutId;
+        const observer = new IntersectionObserver(handleIntersection, {
+            root: null, // Use the viewport as the root
+            threshold: 0.6, // Trigger when 50% of the element is visible
+        });
 
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const threshold = 3297;
-
-            // Clear previous timeout
-            clearTimeout(timeoutId);
-
-            // Set a new timeout to delay setting scrolled to true
-            timeoutId = setTimeout(() => {
-                // Check if scroll position is beyond the threshold
-                if (scrollPosition > threshold && !scrolled) {
-                    setScrolled(true);
-                }
-            }, 200); // Adjust the delay time (in milliseconds) as needed
-        };
-
-        window.addEventListener('scroll', handleScroll);
+        if (elementRef.current) {
+            observer.observe(elementRef.current);
+        }
 
         return () => {
-            // Cleanup the event listener and clear the timeout on component unmount
-            window.removeEventListener('scroll', handleScroll);
-            clearTimeout(timeoutId);
+            // Cleanup the observer on component unmount
+            observer.disconnect();
         };
-    }, [scrolled]);
+    }, []); // Empty dependency array to run the effect once
+    //////////////////////////////////////////////        after adding intersection observer
 
 
     //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
@@ -52,7 +85,7 @@ const FooterSection = ({ aboutRef }) => {
     };
     return (
 
-        <div className="footer">
+        <div className="footer" ref={elementRef}>
             <div className='arrow-up' onClick={handleScrollToAbout}>
                 <KeyboardArrowUpIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '2s' }} fontSize="large" />
             </div>

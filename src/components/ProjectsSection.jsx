@@ -1,7 +1,7 @@
-// Header.jsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import ProjectComponent from './ProjectComponent';
-import './styles.css';
+import './projectSection.css';
 import pic1 from "./pic1.jpg"
 // import './Header.css';
 
@@ -9,7 +9,9 @@ const ProjectsSection = () => {
     // Multiple lines of code or logic
     const title = 'Projects - My Work';
     const [scrolledProjects, setScrolledProjects] = useState([false, false, false, false]);
+
     const loggedRef = useRef([false, false, false, false]);
+
     useEffect(() => {
         let timeoutIds = [];
 
@@ -40,10 +42,9 @@ const ProjectsSection = () => {
         };
     }, [scrolledProjects]);
 
-
     return (
 
-        <div className={`center project `} >
+        <div className={`project `} >
             <h1 className={`project-title ${scrolledProjects[0] ? 'visible' : ''}`}>{title}</h1>
             <ProjectComponent
                 title="Project 1 Cool Title"
@@ -71,3 +72,5 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
+

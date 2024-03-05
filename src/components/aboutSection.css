@@ -5,6 +5,7 @@
     flex-direction: column;
     background-color: white;
     height: 90vh;
+    width: 100vw;
     margin-top: 100vh;
     position: relative;
     overflow: auto;
@@ -15,6 +16,7 @@
     width: 100%;
     /* Make the image take up 100% of the width of the parent container */
     height: auto;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
 }
 
 .content-wrap {
@@ -31,10 +33,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); */
 }
 
-.picture-text-wrapper {
-    display: flex;
-    gap: 25px;
-}
+
 
 .clipped-shape {
     position: absolute;
@@ -51,9 +50,9 @@
 }
 
 .picture-container {
-    width: 350px;
-    height: 350px;
-    border: 1px solid white;
+    width: 330px;
+    height: auto;
+    /* border: 1px solid white; */
 }
 
 .text-container {
@@ -64,7 +63,7 @@
     justify-content: center;
     height: 350px;
     width: 600px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* box-sizing: border-box; */
 
 }
@@ -76,6 +75,7 @@
 }
 
 .content-wrap h1.visible {
+    margin-right: 70px;
     visibility: visible;
     opacity: 1;
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.3s;
@@ -85,6 +85,7 @@
 .picture-container {
     visibility: visible;
     opacity: 0;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 30, 0, 1);
 }
 
 .picture-container.visible {
@@ -92,11 +93,13 @@
     opacity: 1;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0.6s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0.6s;
+
 }
 
 .text-container {
     visibility: visible;
     opacity: 0;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -30, 0, 0, 1);
 }
 
 .text-container.visible {
@@ -106,18 +109,53 @@
     transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 1s, transform 1s cubic-bezier(0.5, 0, 0, 1) 1s;
 }
 
+.picture-text-wrapper {
+    display: flex;
+    gap: 170px;
+}
+
+
+@media only screen and (max-width: 1700px) {
+    .picture-text-wrapper {
+        display: flex;
+        gap: 130px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1400px) {
+
+    .content-wrap {
+        flex-direction: column;
+    }
+
+
+}
+
+
+
+
+
 
 
 @media only screen and (max-width: 1200px) {
+
+
+    .about {
+        height: 80vh;
+        width: 100%;
+    }
+
     .clipped-shape {
+        height: 80vh;
         clip-path: none;
         /* Remove the clip-path for smaller screens */
         -webkit-clip-path: none;
     }
 
-    .content-wrap {
-        flex-direction: column;
-    }
+
 
     .picture-text-wrapper {
         margin-top: 45px;
@@ -125,7 +163,7 @@
     }
 
 
-    h1 {
+    .content-wrap h1 {
         margin-top: 75px;
     }
 
@@ -143,6 +181,15 @@
         margin-top: 55px;
         gap: 20px;
     }
+
+    .about {
+        height: 87vh;
+    }
+
+    .clipped-shape {
+        height: 87vh;
+
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -158,11 +205,15 @@
     }
 
     .about {
-        height: 130vh;
+        height: 128vh;
     }
 
     .content-wrap {
         height: 100%;
+    }
+
+    .content-wrap h1 {
+        margin-top: 0;
     }
 
     .picture-text-wrapper {
@@ -171,13 +222,45 @@
     }
 
     .clipped-shape {
-        height: 130vh;
+        height: 128vh;
     }
 
     .text-container {
         width: 600px;
         font-size: 14px;
     }
+
+
+    .picture-container {
+        visibility: visible;
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 0s, transform 1s cubic-bezier(0.5, 0, 0, 1) 0s;
+    }
+
+    .picture-container.visible {
+        visibility: visible;
+        opacity: 1;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 1s, transform 1s cubic-bezier(0.5, 0, 0, 1) 1s;
+
+    }
+
+    .text-container {
+        visibility: visible;
+        opacity: 0;
+        visibility: visible;
+        opacity: 0;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 30, 0, 1);
+    }
+
+    .text-container.visible {
+        visibility: visible;
+        opacity: 1;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transition: opacity 1s cubic-bezier(0.5, 0, 0, 1) 1.5s, transform 1s cubic-bezier(0.5, 0, 0, 1) 1.5s;
+
+    }
+
 }
 
 @media only screen and (max-width: 650px) {

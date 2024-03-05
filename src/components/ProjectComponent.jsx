@@ -4,10 +4,6 @@ import './projectComponent.css';
 import Button from '@mui/material/Button';
 
 const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
-
-
-
-    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -28,7 +24,7 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
                 } else if (scrollPosition <= threshold && scrolled) {
                     setScrolled(false);
                 }
-            }, 200); // Adjust the delay time (in milliseconds) as needed
+            }, 300); // Adjust the delay time (in milliseconds) as needed
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -41,11 +37,10 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
     }, [scrolled]);
 
 
-    //##### checkpoint before adding intersection observer instead useEffect based on scrollPosition ####
     return (
 
-        <div className={`main-container ${scrolled ? '' : 'scrolled'}`}>
-
+        // <div className={`main-container ${scrolled ? '' : 'scrolled'}`}>
+        <div className={`main-container`}>
             <div className={`description-wraper ${isVisible ? 'visible' : ''}`}>
                 <div className='title'>
                     <h3>{title}</h3>
@@ -70,4 +65,5 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
 };
 
 export default ProjectComponent;
+
 
