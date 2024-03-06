@@ -2,7 +2,7 @@
 // import React from 'react';
 import React, { useEffect, useState } from 'react';
 import './welcomeSection.css';
-import Button from '@mui/material/Button';
+import GradientButton from './GradientButton';
 
 const WelcomeSection = ({ aboutRef }) => {
     const [scrolled, setScrolled] = useState(false);
@@ -49,7 +49,7 @@ const WelcomeSection = ({ aboutRef }) => {
                     <h1>I'm a full-stack developer.</h1>
                 </div>
                 <div className={`welcome-button ${scrolled ? 'scrolled' : `${firstRender ? 'firstRenderButton' : ''}`}`}>
-                    <Button variant="outlined" onClick={scrollToAbout}>Know more</Button>
+                    <GradientButton onClick={scrollToAbout}>Know more</GradientButton>
                 </div>
             </div>
         </div>

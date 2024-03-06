@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './projectComponent.css';
 import Button from '@mui/material/Button';
+import GradientButton from './GradientButton';
 
 const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
     const [scrolled, setScrolled] = useState(false);
@@ -49,8 +50,9 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
                     <p>{description}</p>
                 </div>
                 <div className='buttons'>
-                    <Button variant="outlined">See Live</Button>
-                    <Button color="secondary">Source Code</Button>
+                    <GradientButton >See Live</GradientButton>
+                    {/* <Button color="secondary">Source Code</Button> */}
+                    <p>SOURCE CODE</p>
 
                 </div>
 

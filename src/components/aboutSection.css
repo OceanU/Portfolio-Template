@@ -132,6 +132,11 @@
     }
 
 
+    .content-wrap h1.visible {
+        margin-right: 0;
+    }
+
+
 }
 
 
@@ -287,6 +292,26 @@
     }
 
     .text-container {
-        height: 70vh;
+        height: 50vh;
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .about {
+        height: 100vh;
+    }
+
+    .clipped-shape {
+        height: 100vh;
+    }
+
+    .content-wrap h1.visible {
+        margin-top: 0vh;
+    }
+
+    .text-container.visible {
+        height: 35vh;
     }
 }

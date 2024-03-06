@@ -90,10 +90,10 @@ const FooterSection = ({ aboutRef }) => {
                 <KeyboardArrowUpIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '2s' }} fontSize="large" />
             </div>
             <div className='social-media-icons'>
-                <FacebookIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.2s' }} fontSize="large" />
-                <InstagramIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.4s' }} fontSize="large" />
-                <LinkedInIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.6s' }} fontSize="large" />
-                <GitHubIcon className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.8s' }} fontSize="large" />
+                <FacebookIcon id='facebook' className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.2s' }} fontSize="large" />
+                <InstagramIcon id='instagram' className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.4s' }} fontSize="large" />
+                <LinkedInIcon id='linkedin' className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.6s' }} fontSize="large" />
+                <GitHubIcon id='github' className={scrolled ? 'lift' : ''} style={{ animationDelay: '0.8s' }} fontSize="large" />
             </div>
             <hr />
             <div className='details'>

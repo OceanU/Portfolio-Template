@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     background-color: beige;
-    height: 55vh;
+    height: 50vh;
     color: white;
 
     background-image: url('carbon-fagure.jpg');
@@ -53,6 +53,36 @@
 }
 
 
+.arrow-up {
+    cursor: pointer;
+    transition: margin-bottom 0.3s ease;
+}
+
+.arrow-up:hover {
+    margin-bottom: 10px;
+    /* Move to the right by 5px on hover */
+}
+
+
+#facebook,
+#linkedin,
+#instagram,
+#github {
+    cursor: pointer;
+    transition: margin-bottom 0.5s ease-in-out;
+}
+
+#facebook:hover,
+#linkedin:hover,
+#instagram:hover,
+#github:hover {
+    margin-top: -10px;
+    /* Move to the right by 5px on hover */
+}
+
+
+
+
 /* .social-media-icons>svg {
 
     transition: transform 0.3s ease-in-out;
@@ -61,3 +91,10 @@
 .social-media-icons>svg:hover {
     transform: translateY(-5px);
 } */
+
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        height: 40vh;
+    }
+}

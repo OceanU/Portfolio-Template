@@ -2,7 +2,9 @@
 // import React from 'react';
 import React, { useEffect, useState, useRef } from 'react';
 import './contactSection.css';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import GradientButton from './GradientButton';
+
 
 const ContactSection = () => {
     // Multiple lines of code or logic
@@ -79,7 +81,7 @@ const ContactSection = () => {
                     <h1 className={`contact-tittle ${scrolled ? 'visible' : ''}`}>{title}</h1>
                     <p className={` ${scrolled ? 'visible' : ''}`}>Let's work tohether for your project.</p>
                     <p className={` ${scrolled ? 'visible' : ''}`}>Click button below to copy</p>
-                    <Button variant="outlined" className={`${scrolled ? 'visible' : ''}`}>name@company.com</Button>
+                    <GradientButton className={`${scrolled ? 'visible' : ''}`}>name@company.com</GradientButton>
                 </div>
             </div>
         </div>

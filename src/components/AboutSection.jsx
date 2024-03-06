@@ -2,7 +2,8 @@
 // import React from 'react';
 import React, { useState, useEffect, useRef } from 'react';
 import './aboutSection.css';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
+import GradientButton from './GradientButton';
 import portfolioPicture from './port-pic.jpg';
 
 const AboutSection = ({ aboutRef }) => {
@@ -94,7 +95,7 @@ const AboutSection = ({ aboutRef }) => {
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum.</p>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, sequi id. Beatae similique ratione velit fugit iste numquam dolor totam rerum et laborum, neque debitis omnis fuga maxime nostrum tempora.</p>
                             <div>
-                                <Button variant="outlined" >Resume</Button>
+                                <GradientButton  >Resume</GradientButton>
                             </div>
                         </div>
                     </div>
