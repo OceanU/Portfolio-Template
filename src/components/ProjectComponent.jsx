@@ -1,11 +1,12 @@
 // import React from 'react';
 import React, { useEffect, useState } from 'react';
 import './projectComponent.css';
-import Button from '@mui/material/Button';
 import GradientButton from './GradientButton';
+import Tilt from 'react-parallax-tilt';
 
 const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
     const [scrolled, setScrolled] = useState(false);
+
 
     useEffect(() => {
         let timeoutId;
@@ -57,9 +58,18 @@ const ProjectComponent = ({ title, description, imageUrl, isVisible }) => {
                 </div>
 
             </div>
-            <div className={`picture-wraper ${isVisible ? 'visible' : ''}`}>
-                <img src={imageUrl} alt={title} className='project-image' />
-            </div>
+            <Tilt
+                gyroscope={true}
+                perspective={500}
+                glareEnable={true}
+                glareMaxOpacity={0.75}
+                scale={1.02}
+
+            >
+                <div className={`picture-wraper ${isVisible ? 'visible' : ''}`}>
+                    <img src={imageUrl} alt={title} className='project-image' />
+                </div>
+            </Tilt>
 
         </div>
 

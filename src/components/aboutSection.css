@@ -5,7 +5,7 @@
     flex-direction: column;
     background-color: white;
     height: 90vh;
-    width: 100vw;
+    width: 98.9vw;
     margin-top: 100vh;
     position: relative;
     overflow: auto;
@@ -313,5 +313,24 @@
 
     .text-container.visible {
         height: 35vh;
+    }
+}
+
+
+@media only screen and (max-width: 370px) {
+    .about {
+        height: 120vh;
+    }
+
+    .clipped-shape {
+        height: 120vh;
+    }
+
+    .content-wrap h1.visible {
+        margin-top: 0;
+    }
+
+    .text-container.visible {
+        height: 60vh;
     }
 }

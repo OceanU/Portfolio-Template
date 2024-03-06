@@ -45,6 +45,7 @@
     transform: rotate(5deg);
     background-image: linear-gradient(-135deg, #da52fc, #f2ce2e);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -174,7 +175,7 @@
 
 @media only screen and (max-width: 600px) {
     .main-container {
-        padding-top: 0vh;
+        padding-top: 15vh;
         height: 85vh;
     }
 

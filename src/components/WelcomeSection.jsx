@@ -45,11 +45,11 @@ const WelcomeSection = ({ aboutRef }) => {
         <div className="welcome">
             <div className='welcome-wrap'>
                 <div className={`introduction-text ${scrolled ? 'scrolled' : `${firstRender ? 'firstRenderText' : ''}`}`}>
-                    <h1>Hi, my name is <span className='introduction-text-span'>Ionut Oceanu</span>, </h1>
-                    <h1>I'm a full-stack developer.</h1>
+                    <h1>Hi, my name is <span className='introduction-text-span'>Name LastName</span>, </h1>
+                    <h1>I'm a whatever your profession is.</h1>
                 </div>
                 <div className={`welcome-button ${scrolled ? 'scrolled' : `${firstRender ? 'firstRenderButton' : ''}`}`}>
-                    <GradientButton onClick={scrollToAbout}>Know more</GradientButton>
+                    <GradientButton onClick={scrollToAbout}>See more</GradientButton>
                 </div>
             </div>
         </div>
